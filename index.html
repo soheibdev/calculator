@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    .container{
+        width: 100%;
+        height: 100vh;
+        background: linear-gradient(135deg,#153677,#4e085f);
+        padding: 20px;
+    }
+    .todo-app{
+        max-width: 400px;
+        min-height: 100px;
+        background-color: hsl(0, 0% , 15%) ;
+        margin: 120px auto 100px;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;;
+
+    }
+  
+    input{
+        width: 100%;
+        height: 90px;
+        border: none;
+        outline: none;
+        background: transparent;
+        font-size:40px ;
+        color: white;
+        padding: 15px ;
+        box-shadow:rgba(0, 0, 0, 0.35) 0px 5px 5px; ;        
+    }
+    .button-area{
+       background-color:  hsl(0, 0% ,20%) ;
+       padding: 20px;
+    
+
+
+    }
+    .btn-line{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        margin-bottom: 15px;
+        margin-top: 13px;
+    }
+    .btn-line button{
+        border-radius: 50%;
+        width: 60px;
+        height: 60px;
+        background-color: black;
+        color: white;
+        font-size: 30px;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        cursor: pointer;
+        border: none;
+        transition:  border 0.2s;
+        transition:  box-shadow 0.2s;
+    }
+    .btn-line button:hover{
+        border: solid 3px white;
+        box-shadow: rgba(0, 0, 0, 0.35) 10px 8px 8px;
+
+    }
+    .opiration-btn{
+        border-radius: 50%;
+        width: 60px;
+        height: 60px;
+        background-color: rgb(233, 152, 1);
+        border: none;
+        color: white;
+        font-size: 30px;
+        
+    }
+</style>
+<body>
+    <div class="container">
+        <div class="todo-app">
+            <div class="input-area">
+                <input id="input" type="text">
+            </div>
+            <div class="button-area">
+                <div class="btn-line">
+                    <button onclick="opiration(`+`)" style="background-color: orange;">+</button>
+                    <button onclick=" addNumber(7)">7</button>
+                    <button onclick=" addNumber(8)">8</button>
+                    <button onclick=" addNumber(9)">9</button>
+                </div>
+                <div class="btn-line">
+                    <button onclick="opiration(`-`)" style="background-color: orange;">-</button>
+                    <button onclick=" addNumber(4)">4</button>
+                    <button onclick=" addNumber(5)">5</button>
+                    <button onclick=" addNumber(6)">6</button>
+                </div>
+                <div class="btn-line">
+                    <button onclick="opiration(`*`)" style="background-color: orange;line-height: 2.5;">*</button>
+                    <button onclick=" addNumber(1)">1</button>
+                    <button onclick=" addNumber(2)">2</button>
+                    <button onclick=" addNumber(3)">3</button>
+                </div>
+                <div class="btn-line">
+                    <button onclick="opiration(`/`)" style="background-color: orange;">/</button>
+                    <button onclick=" addNumber(0)">0</button>
+                    <button onclick="dote()">.</button>
+                    <button onclick="resultat()" >=</button>
+                </div>
+                <div class="btn-line" style="justify-content:flex-start;">
+                    <button onclick="clearinput()" style="background-color: orange; margin-left: 28.5px;">C</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="script.js"></script>
+</html>
