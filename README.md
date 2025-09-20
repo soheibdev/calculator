@@ -19,7 +19,5 @@ It supports numeric input through buttons only (keyboard typing disabled), and c
 - Error handling for invalid expressions
 - Organized JavaScript functions (reusable for numbers & operators)
 
-- ## 📸 Screenshot
 
-![Calculator Screenshot](screenshot/Capture d'écran 2025-09-20 214053.png)
 
